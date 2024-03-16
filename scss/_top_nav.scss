@@ -3,7 +3,7 @@
 .top-nav {
     background-color: $top-black;
 
-    .top-nav-content {
+    .top-nav__content {
         width: 90%;
         margin: 0 auto;
         padding: .4rem;
@@ -11,12 +11,12 @@
         font-weight: 300;
         font-size: .8rem;
 
-        .top-nav-left {
+        .top-nav__left,
+        .top-nav__right {
             gap: 1rem;
         }
 
         ul {
-            gap: 1rem;
             li a {
                 color: #b4b4b4;
 

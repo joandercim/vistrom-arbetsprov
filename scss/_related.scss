@@ -1,0 +1,39 @@
+.related {
+    width: 90%;
+    margin: 6rem auto;
+    max-width: 2500px;
+
+    .related__header {
+        margin-bottom: 2rem;
+        color: black;
+        font-weight: 500;
+
+        i {
+            padding-left: 1rem;
+        }
+    }
+
+    .related__related-cards {
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+        .related__card {
+            .related__card__info {
+                max-width: 80%;
+                margin: 1rem auto;
+                text-align: center;
+
+                h5 {
+                    margin-bottom: .75rem;
+                    font-size: 1rem;
+                    font-weight: 800;
+                }
+
+                p {
+                    line-height: 1.5rem;
+                    color: #aaa;
+                }
+            }
+        }
+    }
+}

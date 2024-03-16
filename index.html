@@ -7,72 +7,198 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="top-nav">
-          <div class="top-nav-content flex justify-between uppercase">
-            <div class="top-nav-left flex">
-              <span>Fri frakt & fria returer</span>
-              <span>1-3 dagar leverans</span>
-            </div>
-            <div>
-              <ul class="flex">
-                <li><a href="#">Blogg</a></li>
-                <li><a href="#">Mitt konto</a></li>
-                <li><a href="#">Kundtjänst</a></li>
-              </ul>
-            </div>
+    <header>
+      <div class="top-nav">
+        <div class="top-nav__content flex justify-between uppercase">
+          <div class="top-nav__left flex">
+            <span>Fri frakt & fria returer</span>
+            <span>1-3 dagar leverans</span>
           </div>
-        </div>
-        <div class="main-nav-container">
-          <div class="main-nav flex justify-between uppercase">
-            <ul class="flex main-nav-left">
-              <li>Herr</li>
-              <li>Dam</li>
-              <li>Märken</li>
-              <li>Rea</li>
-            </ul>
-            <div class="main-nav-logo flex justify-center">Logo</div>
-            <ul class="flex main-nav-right">
-              <li>Sök</li>
-              <li>Lista (2)</li>
-              <li>Kundkorg (2) <i class="fa-solid fa-cart-shopping"></i></li>
+          <div>
+            <ul class="top-nav__right flex">
+              <li><a href="#">Blogg</a></li>
+              <li><a href="#">Mitt konto</a></li>
+              <li><a href="#">Kundtjänst</a></li>
             </ul>
           </div>
         </div>
-      </header>
-      <main class="product-section">
-        <div class="product flex">
-          <div class="main-image-container">
-            <img src="./assets/img/main.png" alt="product-image" />
-          </div>
+      </div>
+      <div class="main-nav-container">
+        <div class="main-nav flex justify-between uppercase">
+          <ul class="flex main-nav__left">
+            <li><a href="#">Herr</a></li>
+            <li><a href="#">Dam</a></li>
+            <li><a href="#">Märken</a></li>
+            <li><a href="#">Rea</a></li>
+          </ul>
+          <div class="main-nav__logo flex justify-center">Logo</div>
+          <ul class="flex main-nav__right">
+            <li><a href="#">Sök</a></li>
+            <li><a href="#">Lista (2)</a></li>
+            <li>
+              <a href="#">Kundkorg (2)</a>
+              <i class="fa-solid fa-cart-shopping"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="product-section">
+      <div class="product flex">
+        <div class="main-image-container">
+          <img src="./assets/img/main.png" alt="product-image" />
+        </div>
 
-          <div class="product-info-container">
-            <div class="top-section uppercase relative">
-              <div class="top-left-info-label">Nyhet</div>
-              <div class="is-in-stock">
-                <span>Finns i lager <i class="fa-solid fa-check"></i></span>
-              </div>
+        <div class="product-info-container">
+          <div class="top-section uppercase relative">
+            <div class="top-left-info-label">Nyhet</div>
+            <div class="product-info__in-stock">
+              <span> <i class="fa-solid fa-check"></i> Finns i lager </span>
             </div>
-            <div class="product-description">
-              <img src="./assets/img/Hackett.png" alt="Hackett" />
+          </div>
+          <div class="product-desc">
+            <div class="product-desc__logo">
+              <img src="./assets/img/Hackett.png" alt="Hackett London" />
+            </div>
+            <div class="product-desc__text">
               <h2>Hackett Garment Dyed Oxford Slim Fit Shirt White</h2>
               <h3>999 kr</h3>
-              <div class="size-select flex justify-center">
-                <input type="checkbox" name="size" id="size-s" value="s" />
-                <label for="size-s">S</label>
-                <input type="checkbox" name="size" id="size-m" value="s" />
-                <label for="size-s">M</label>
-                <input type="checkbox" name="size" id="size-l" value="s" />
-                <label for="size-s">L</label>
+              <div class="product-desc__size-select">
+                <h3 class="uppercase">Välj storlek</h3>
+                <div
+                  class="product-desc__size-select__labels flex justify-center"
+                >
+                  <input type="radio" name="size" id="size-s" value="s" />
+                  <label for="size-s">S</label>
+                  <input type="radio" name="size" id="size-m" value="m" />
+                  <label for="size-m">M</label>
+                  <input type="radio" name="size" id="size-l" value="l" />
+                  <label for="size-l">L</label>
+                </div>
               </div>
-              <button class="uppercase">Lägg i varukorg</button>
-              <p class="uppercase">Artikelnummer: <span>HM3049957AL</span></p>
+            </div>
+            <button class="uppercase">Lägg i varukorg</button>
+            <p class="uppercase">Artikelnummer: <span>HM3049957AL</span></p>
+
+            <div class="accordion">
+              <div class="accordion__row">
+                <div class="accordion__row__title flex justify-between">
+                  <h2 class="uppercase">Produktbeskrivning</h2>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="accordion__row__content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Fugiat eius dolor ullam rerum vitae tempora doloribus quae
+                    in minima quasi commodi, omnis provident nam obcaecati!
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion__row">
+                <div class="accordion__row__title flex justify-between">
+                  <h2 class="uppercase">Storlek & passform</h2>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="accordion__row__content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Fugiat eius dolor ullam rerum vitae tempora doloribus quae
+                    in minima quasi commodi, omnis provident nam obcaecati!
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion__row">
+                <div class="accordion__row__title flex justify-between">
+                  <h2 class="uppercase">Tvätt & Skötselråd</h2>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="accordion__row__content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Fugiat eius dolor ullam rerum vitae tempora doloribus quae
+                    in minima quasi commodi, omnis provident nam obcaecati!
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion__row">
+                <div class="accordion__row__title flex justify-between">
+                  <h2 class="uppercase">Leverans & Retur</h2>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="accordion__row__content">
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Fugiat eius dolor ullam rerum vitae tempora doloribus quae
+                    in minima quasi commodi, omnis provident nam obcaecati!
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
+
+    <section class="related">
+      <div class="related__header flex justify-between">
+        <h4 class="uppercase">Mer från Hackett London</h4>
+        <h4 class="uppercase">Se alla Hackett produkter <i class="fa-solid fa-chevron-right"></i></h4>
+      </div>
+      <div class="related__related-cards flex justify-between">
+        <div class="related__card relative">
+          <div class="top-left-info-label">Nyhet</div>
+          <img
+            src="./assets/img/SS16_HM401415_951_01_thumb.png"
+            alt="Hackett London"
+          />
+          <div class="related__card__info">
+            <h5 class="uppercase">Hackett London</h5>
+            <p>Hackett Garment Dyed Oxford Slim Fit Shirt White</p>
+            <p class="price">999 kr</p>
+          </div>
+        </div>
+
+        <div class="related__card">
+          <img
+            src="./assets/img/SS16_HM441696_869_01_thumb.png"
+            alt="Hackett London"
+          />
+          <div class="related__card__info">
+            <h5 class="uppercase">Hackett London</h5>
+            <p>Hackett Garment Dyed Oxford Slim Fit Shirt White</p>
+            <p class="price">999 kr</p>
+          </div>
+        </div>
+
+        <div class="related__card">
+          <img
+            src="./assets/img/SS16_HM401400_561_01_thumb.png"
+            alt="Hackett London"
+          />
+          <div class="related__card__info">
+            <h5 class="uppercase">Hackett London</h5>
+            <p>Hackett Garment Dyed Oxford Slim Fit Shirt White</p>
+            <p class="price">999 kr</p>
+          </div>
+        </div>
+
+        <div class="related__card">
+          <img
+            src="./assets/img/SS16_HM550478_595_01_thumb.png"
+            alt="Hackett London"
+          />
+          <div class="related__card__info">
+            <h5 class="uppercase">Hackett London</h5>
+            <p>Hackett Garment Dyed Oxford Slim Fit Shirt White</p>
+            <p class="price">999 kr</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
     <script
       src="https://kit.fontawesome.com/4cb68bf540.js"
       crossorigin="anonymous"

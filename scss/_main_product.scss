@@ -1,3 +1,4 @@
+@use './accordion';
 @import './variables';
 
 .product-section {
@@ -7,13 +8,17 @@
     rgba(255, 255, 255, 1) 0%,
     rgba(236, 236, 236, 1) 100%
   );
+  margin: 0 auto;
+  max-width: 2500px;
 
   .product {
     .main-image-container {
-      max-width: 60%;
+      min-width: 60%;
 
-      img {
+      & img {
         max-width: 100%;
+        max-height: 50rem;
+        object-fit: cover;
       }
     }
 
@@ -21,35 +26,88 @@
       min-width: 40%;
       flex-grow: 1;
 
-      .is-in-stock {
+      .product-info__in-stock {
         display: flex;
         justify-content: end;
         padding: 1rem;
-        font-size: .9rem;
-      }
+        font-size: 0.9rem;
 
-      .product-description {
-        text-align: center;
-
-        .size-select {
-          gap: 0.3rem;
-          
+        i.fa-check {
+          color: #59c587;
         }
       }
-    }
 
-    input {
-      display: none;
-    }
+      .product-desc {
+        text-align: center;
 
-    label {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid #999999;
-      font-size: 0.8rem;
-      padding: 0.3rem 0.5rem;
-      cursor: pointer;
+        .product-desc__logo img {
+          display: block;
+          margin: 0 auto;
+        }
+
+        button {
+          background-color: $button-black;
+          color: white;
+          border: none;
+          height: 2.5rem;
+          width: 12rem;
+          margin-bottom: 2rem;
+          font-weight: 300;
+          cursor: pointer;
+        }
+
+        p {
+          font-size: 0.85rem;
+        }
+
+        .product-desc__text {
+          h2 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            line-height: 1.6rem;
+            max-width: 50%;
+            margin: 1.5rem auto;
+          }
+
+          h3 {
+            font-weight: 800;
+          }
+
+          .product-desc__size-select {
+            gap: 0.3rem;
+
+            h3 {
+              font-size: 0.9rem;
+              font-weight: 500;
+              display: block;
+              margin: 2rem 0 0.5rem 0;
+            }
+
+            .product-desc__size-select__labels {
+              input[type='radio'] {
+                display: none;
+              }
+
+              label {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #999999;
+                font-size: 0.8rem;
+                padding: 0.3rem 0.5rem;
+                cursor: pointer;
+                margin: 0 0.23rem 2rem;
+                background-color: white;
+              }
+
+              input[type='radio']:checked + label {
+                background-color: $button-black;
+                color: white;
+              }
+            }
+          }
+        }
+      }
     }
 
     p {

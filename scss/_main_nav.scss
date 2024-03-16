@@ -1,7 +1,8 @@
 @import './variables';
 
 .main-nav-container {
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  background-color: white;
+    filter: drop-shadow(1px 1px 5px #00000040);
 
   .main-nav {
     width: 80%;
@@ -9,7 +10,11 @@
     height: 7rem;
     align-items: center;
 
-    .main-nav-logo {
+    a {
+      color: black;
+    }
+
+    .main-nav__logo {
       align-items: center;
       font-size: 1.3rem;
       background-color: #d8d8d8;
@@ -19,19 +24,19 @@
       width: 15rem;
     }
 
-    .main-nav-left,
-    .main-nav-right {
+    .main-nav__left,
+    .main-nav__right {
       gap: 1.7rem;
       font-weight: 500;
       font-size: 1rem;
       width: 35%;
     }
 
-    .main-nav-left {
+    .main-nav__left {
       justify-content: start;
     }
 
-    .main-nav-right {
+    .main-nav__right {
       justify-content: end;
     }
   }

@@ -1,6 +1,7 @@
 @use './top_nav';
 @use './main_nav';
 @use './main_product';
+@use './related';
 @import './variables';
 
 * {
@@ -12,13 +13,18 @@
     text-decoration: none;
 }
 
+.container {
+    max-width: 2600px;
+    margin: 0 auto;
+}
+
 // Shared
 .top-left-info-label {
     background-color: black;
     font-size: 1rem;
     color: $almost-white;
     text-align: center;
-    padding: .3rem 1.2rem;
+    padding: .3rem 1.5rem;
     position: absolute;
     top: 0;
     left: 0;
