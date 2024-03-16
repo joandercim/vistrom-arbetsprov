@@ -1,0 +1,26 @@
+@import './variables';
+
+.top-nav {
+    background-color: $top-black;
+
+    .top-nav-content {
+        width: 90%;
+        margin: 0 auto;
+        padding: .4rem;
+        color: #b4b4b4;
+        font-weight: 300;
+        font-size: .8rem;
+
+        .top-nav-left {
+            gap: 1rem;
+        }
+
+        ul {
+            gap: 1rem;
+            li a {
+                color: #b4b4b4;
+
+            }
+        }
+    }
+}

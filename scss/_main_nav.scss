@@ -1,0 +1,38 @@
+@import './variables';
+
+.main-nav-container {
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+
+  .main-nav {
+    width: 80%;
+    margin: 0 auto;
+    height: 7rem;
+    align-items: center;
+
+    .main-nav-logo {
+      align-items: center;
+      font-size: 1.3rem;
+      background-color: #d8d8d8;
+      color: #525252;
+      border: 1px solid #979797;
+      height: 65%;
+      width: 15rem;
+    }
+
+    .main-nav-left,
+    .main-nav-right {
+      gap: 1.7rem;
+      font-weight: 500;
+      font-size: 1rem;
+      width: 35%;
+    }
+
+    .main-nav-left {
+      justify-content: start;
+    }
+
+    .main-nav-right {
+      justify-content: end;
+    }
+  }
+}

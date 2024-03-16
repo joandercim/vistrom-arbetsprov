@@ -1,7 +1,54 @@
-@use './variables';
+@use './top_nav';
+@use './main_nav';
+@use './main_product';
+@import './variables';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    font-family: 'Roboto';
+    text-decoration: none;
+}
+
+// Shared
+.top-left-info-label {
+    background-color: black;
+    font-size: 1rem;
+    color: $almost-white;
+    text-align: center;
+    padding: .3rem 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+// Flexbox & Positioning
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.relative {
+    position: relative;
+}
+
+// Dev
+
+.border {
+    border: 2px solid black;
+}
+
+// Typography
+
+.uppercase {
+    text-transform: uppercase;
 }
