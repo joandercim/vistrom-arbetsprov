@@ -145,8 +145,11 @@
     <section class="related">
       <div class="related__header flex justify-between">
         <h4 class="uppercase">Mer från Hackett London</h4>
-        <h4 class="uppercase">Se alla Hackett produkter <i class="fa-solid fa-chevron-right"></i></h4>
+        <a href="#" class="uppercase"
+          >Se alla Hackettprodukter<i class="fa-solid fa-chevron-right"></i
+        ></a>
       </div>
+
       <div class="related__related-cards flex justify-between">
         <div class="related__card relative">
           <div class="top-left-info-label">Nyhet</div>
@@ -157,11 +160,12 @@
           <div class="related__card__info">
             <h5 class="uppercase">Hackett London</h5>
             <p>Hackett Garment Dyed Oxford Slim Fit Shirt White</p>
-            <p class="price">999 kr</p>
+            <span class="price">999 kr</span>
           </div>
         </div>
 
-        <div class="related__card">
+        <div class="related__card relative">
+          <div class="top-left-info-label blue">Kampanj</div>
           <img
             src="./assets/img/SS16_HM441696_869_01_thumb.png"
             alt="Hackett London"
@@ -169,7 +173,8 @@
           <div class="related__card__info">
             <h5 class="uppercase">Hackett London</h5>
             <p>Hackett Garment Dyed Oxford Slim Fit Shirt White</p>
-            <p class="price">999 kr</p>
+            <span class="price old-price">999 kr</span>
+            <span class="price discounted">799 kr</span>
           </div>
         </div>
 
@@ -181,7 +186,7 @@
           <div class="related__card__info">
             <h5 class="uppercase">Hackett London</h5>
             <p>Hackett Garment Dyed Oxford Slim Fit Shirt White</p>
-            <p class="price">999 kr</p>
+            <span class="price">999 kr</span>
           </div>
         </div>
 
@@ -193,11 +198,27 @@
           <div class="related__card__info">
             <h5 class="uppercase">Hackett London</h5>
             <p>Hackett Garment Dyed Oxford Slim Fit Shirt White</p>
-            <p class="price">999 kr</p>
+            <span class="price">999 kr</span>
           </div>
         </div>
       </div>
     </section>
+    <section class="subscribe flex">
+      <div class="subscribe__text">
+        <h2 class="uppercase">Få det senaste</h2>
+        <p>
+          Join our mailing list to stay up to date on new arrivals,
+          <br />promotions and all things
+        </p>
+      </div>
+      <div class="subscribe__form flex">
+        <form>
+          <input type="text" name="email" placeholder="E-postadress" />
+          <button class="uppercase">Skicka</button>
+        </form>
+      </div>
+    </section>
+
     <script src="js/script.js"></script>
     <script
       src="https://kit.fontawesome.com/4cb68bf540.js"

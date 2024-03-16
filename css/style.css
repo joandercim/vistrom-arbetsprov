@@ -2,16 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 .top-nav {
   background-color: #1d1d1b;
 }
 .top-nav .top-nav__content {
+  max-width: 2000px;
   width: 90%;
   margin: 0 auto;
   padding: 0.4rem;
   color: #b4b4b4;
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .top-nav .top-nav__content .top-nav__left,
 .top-nav .top-nav__content .top-nav__right {
@@ -30,6 +32,7 @@
   margin: 0 auto;
   height: 7rem;
   align-items: center;
+  max-width: 1200px;
 }
 .main-nav-container .main-nav a {
   color: black;
@@ -100,14 +103,14 @@
   background: rgb(255, 255, 255);
   background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(236, 236, 236) 100%);
   margin: 0 auto;
-  max-width: 2500px;
+  max-width: 1590px;
 }
 .product-section .product .main-image-container {
   min-width: 60%;
 }
 .product-section .product .main-image-container img {
-  max-width: 100%;
-  max-height: 50rem;
+  width: 100%;
+  max-height: 55rem;
   object-fit: cover;
 }
 .product-section .product .product-info-container {
@@ -188,35 +191,111 @@
 }
 
 .related {
-  width: 90%;
+  width: 95%;
   margin: 6rem auto;
-  max-width: 2500px;
+  max-width: 1589px;
 }
 .related .related__header {
   margin-bottom: 2rem;
   color: black;
   font-weight: 500;
 }
+.related .related__header a {
+  color: black;
+  font-weight: 800;
+}
 .related .related__header i {
-  padding-left: 1rem;
+  padding-left: 0.4rem;
 }
 .related .related__related-cards {
   flex-wrap: wrap;
   margin: 0 auto;
 }
+.related .related__related-cards .related__card {
+  max-width: 24%;
+}
+.related .related__related-cards .related__card img {
+  max-width: 100%;
+}
 .related .related__related-cards .related__card .related__card__info {
-  max-width: 80%;
+  max-width: 70%;
   margin: 1rem auto;
   text-align: center;
 }
 .related .related__related-cards .related__card .related__card__info h5 {
   margin-bottom: 0.75rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 800;
+  letter-spacing: -0.5px;
 }
 .related .related__related-cards .related__card .related__card__info p {
+  font-size: 1rem;
   line-height: 1.5rem;
   color: #aaa;
+}
+.related .related__related-cards .related__card .related__card__info span.price {
+  margin-top: 0.75rem;
+  font-weight: 800;
+  color: black;
+  font-size: 1.2rem;
+}
+.related .related__related-cards .related__card .related__card__info span.price.old-price {
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.related .related__related-cards .related__card .related__card__info span.price.discounted {
+  color: red;
+}
+
+.subscribe {
+  width: 96%;
+  max-width: 1590px;
+  margin: 0 auto;
+  background-image: url("../assets/img/newsletter_bg.png");
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 200px;
+}
+.subscribe .subscribe__text {
+  color: white;
+  width: 50%;
+  text-align: center;
+}
+.subscribe .subscribe__text h2 {
+  font-weight: 400;
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+.subscribe .subscribe__text p {
+  line-height: 1.6rem;
+}
+.subscribe .subscribe__form {
+  width: 50%;
+}
+.subscribe .subscribe__form form {
+  display: flex;
+}
+.subscribe .subscribe__form form input[type=text] {
+  border: none;
+  display: block;
+  width: 25rem;
+  padding: 1rem;
+  margin-left: 5rem;
+}
+.subscribe .subscribe__form form input[type=text]::placeholder {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.subscribe .subscribe__form form button {
+  border: none;
+  background-color: #141527;
+  color: white;
+  font-size: 1rem;
+  padding: 0 2rem;
 }
 
 * {
@@ -242,6 +321,10 @@
   position: absolute;
   top: 0;
   left: 0;
+  text-transform: uppercase;
+}
+.top-left-info-label.blue {
+  background-color: #2c2f3e;
 }
 
 .flex {

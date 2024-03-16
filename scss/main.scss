@@ -2,6 +2,7 @@
 @use './main_nav';
 @use './main_product';
 @use './related';
+@use './subscribe';
 @import './variables';
 
 * {
@@ -28,6 +29,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    text-transform: uppercase;
+
+    &.blue {
+        background-color: #2c2f3e;
+    }
 }
 
 // Flexbox & Positioning

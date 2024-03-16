@@ -1,38 +1,67 @@
 .related {
-    width: 90%;
+    width: 95%;
     margin: 6rem auto;
-    max-width: 2500px;
+    max-width: 1589px;
 
     .related__header {
         margin-bottom: 2rem;
         color: black;
         font-weight: 500;
 
+        a {
+            color: black;
+            font-weight: 800;
+        }
+
         i {
-            padding-left: 1rem;
+            padding-left: .4rem;
         }
     }
 
     .related__related-cards {
         flex-wrap: wrap;
         margin: 0 auto;
-
+        
         .related__card {
+            max-width: 24%;
+            
+            img {
+                max-width: 100%;
+            }
             .related__card__info {
-                max-width: 80%;
+                max-width: 70%;
                 margin: 1rem auto;
                 text-align: center;
 
                 h5 {
                     margin-bottom: .75rem;
-                    font-size: 1rem;
+                    font-size: 1.1rem;
                     font-weight: 800;
+                    letter-spacing: -.5px;
                 }
 
                 p {
+                    font-size: 1rem;
                     line-height: 1.5rem;
                     color: #aaa;
                 }
+
+                span.price {
+                    margin-top: .75rem;
+                    font-weight: 800;
+                    color: black;
+                    font-size: 1.2rem;
+                    
+                    &.old-price {
+                        text-decoration: line-through;
+                        font-weight: 400;
+                    }
+    
+                    &.discounted {
+                        color: red;
+                    }
+                }
+
             }
         }
     }
