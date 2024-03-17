@@ -1,68 +1,70 @@
 .related {
-    width: 95%;
-    margin: 6rem auto;
-    max-width: 1589px;
+  margin: 0 auto 6rem;
+  max-width: calc(1590px * 0.9);
 
-    .related__header {
-        margin-bottom: 2rem;
-        color: black;
-        font-weight: 500;
+  .related__header {
+    margin-bottom: 2.7rem;
+    color: black;
+    font-weight: 500;
 
-        a {
-            color: black;
-            font-weight: 800;
-        }
-
-        i {
-            padding-left: .4rem;
-        }
+    h4,
+    a {
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: black;
     }
 
-    .related__related-cards {
-        flex-wrap: wrap;
-        margin: 0 auto;
-        
-        .related__card {
-            max-width: 24%;
-            
-            img {
-                max-width: 100%;
-            }
-            .related__card__info {
-                max-width: 70%;
-                margin: 1rem auto;
-                text-align: center;
-
-                h5 {
-                    margin-bottom: .75rem;
-                    font-size: 1.1rem;
-                    font-weight: 800;
-                    letter-spacing: -.5px;
-                }
-
-                p {
-                    font-size: 1rem;
-                    line-height: 1.5rem;
-                    color: #aaa;
-                }
-
-                span.price {
-                    margin-top: .75rem;
-                    font-weight: 800;
-                    color: black;
-                    font-size: 1.2rem;
-                    
-                    &.old-price {
-                        text-decoration: line-through;
-                        font-weight: 400;
-                    }
-    
-                    &.discounted {
-                        color: red;
-                    }
-                }
-
-            }
-        }
+    i {
+      font-size: 1.25rem;
+      padding-left: 1rem;
     }
+  }
+
+  .related__related-cards {
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    .related__card {
+      max-width: 24%;
+      background-color: #fdfdfd;
+
+      img {
+        max-width: 100%;
+      }
+      .related__card__info {
+        max-width: 70%;
+        margin: 1rem auto;
+        text-align: center;
+
+        h5 {
+          margin-bottom: 0.75rem;
+          font-size: 1.1rem;
+          font-weight: 800;
+          letter-spacing: -0.5px;
+        }
+
+        p {
+          font-size: .95rem;
+          line-height: 1.5rem;
+          color: #aaa;
+        }
+
+        span.price {
+          line-height: 4rem;
+          font-weight: 800;
+          color: black;
+          font-size: 1.2rem;
+
+          &.old-price {
+            text-decoration: line-through;
+            font-weight: 400;
+          }
+
+          &.discounted {
+            color: red;
+          }
+        }
+      }
+    }
+  }
 }

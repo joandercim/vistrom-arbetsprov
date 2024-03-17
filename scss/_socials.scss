@@ -1,0 +1,27 @@
+.socials {
+    background-color: #f1f1f1;
+
+    .socials__content {
+        max-width: calc(1590px * 0.9);
+        margin: 0 auto;
+        padding: 3rem 0;
+        gap: 1.4rem;
+
+        a {
+            flex-grow: 1;
+            color: black;
+            font-size: 1.13rem;
+            letter-spacing: 1px;
+        }
+
+        .socials__content__instagram,
+        .socials__content__facebook,
+        .socials__content__nyhetsbrev {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            padding: 1rem 0;
+        }
+    }
+}

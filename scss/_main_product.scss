@@ -8,17 +8,15 @@
     rgba(255, 255, 255, 1) 0%,
     rgba(236, 236, 236, 1) 100%
   );
-  margin: 0 auto;
+  margin: 0 auto 7rem;
   max-width: 1590px;
 
   .product {
     .main-image-container {
-      min-width: 60%;
+      min-width: 56%;
 
       & img {
         width: 100%;
-        max-height: 55rem;
-        object-fit: cover;
       }
     }
 
@@ -49,9 +47,10 @@
           background-color: $button-black;
           color: white;
           border: none;
-          height: 2.5rem;
-          width: 12rem;
+          height: 3rem;
+          width: 14rem;
           margin-bottom: 2rem;
+          font-size: 1rem;
           font-weight: 300;
           cursor: pointer;
         }
@@ -62,8 +61,8 @@
 
         .product-desc__text {
           h2 {
-            font-size: 1.1rem;
-            font-weight: 500;
+            font-size: 1.3rem;
+            font-weight: 400;
             line-height: 1.6rem;
             max-width: 50%;
             margin: 1.5rem auto;

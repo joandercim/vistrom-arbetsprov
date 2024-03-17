@@ -1,12 +1,12 @@
 .accordion {
-  margin: 2rem auto;
+  margin: 1rem auto;
   max-width: 90%;
 
   .accordion__row {
-    border-top: 2px solid #aaaaaa;
+    border-top: 1px solid #aaaaaa;
 
     &:last-child {
-      border-bottom: 2px solid #aaaaaa;
+      border-bottom: 1px solid #aaaaaa;
     }
 
     &.active {
@@ -25,7 +25,7 @@
       color: #aaaaaa;
 
       h2 {
-        font-size: 1rem;
+        font-size: .9rem;
         font-weight: 400;
       }
 
@@ -43,6 +43,7 @@
       p {
         text-align: left;
         color: black;
+        font-weight: 700;
       }
     }
   }
