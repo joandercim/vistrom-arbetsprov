@@ -1,5 +1,27 @@
 const chevronDown = document.querySelectorAll('.fa-chevron-down');
 const rows = document.querySelectorAll('.accordion__row');
+const slides = document.querySelectorAll('.slides img');
+const slideSelectors = document.querySelectorAll('.slide-nav__circle');
+
+const showSlide = (id) => {
+  slides[id].classList.add('display-slide')
+  slideSelectors[id].classList.add('active-slide')
+};
+
+const prevSlide = () => {};
+
+const nextSlide = () => { };
+
+const changeSlide = (e) => {
+  slideSelectors.forEach(selector => {
+    selector.classList.remove('active-slide')
+  })
+  slides.forEach(slide => {
+    slide.classList.remove('display-slide')
+  })
+
+  showSlide(e.target.id)
+}
 
 const toggleAccordionRow = (e) => {
   const row = e.target.parentElement.parentElement;
@@ -31,6 +53,12 @@ const init = () => {
   chevronDown.forEach((chev) => {
     chev.addEventListener('click', toggleAccordionRow);
   });
+
+  slideSelectors.forEach(selector => selector.addEventListener('click', (e) => changeSlide(e)))
+
+  slides[0].classList.add('display-slide');
+  slideSelectors[0].classList.add('active-slide')
 };
 
-init();
+document.addEventListener('DOMContentLoaded', init);
+

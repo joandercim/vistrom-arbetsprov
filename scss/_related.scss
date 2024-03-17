@@ -1,11 +1,16 @@
 .related {
   margin: 0 auto 6rem;
   max-width: calc(1590px * 0.9);
+  
+  @media (max-width: '860px') {
+    margin: 0 2rem;
+  }  
 
   .related__header {
     margin-bottom: 2.7rem;
     color: black;
     font-weight: 500;
+
 
     h4,
     a {
@@ -18,18 +23,34 @@
       font-size: 1.25rem;
       padding-left: 1rem;
     }
+
+    @media (max-width: '860px') {
+      h4,
+      a,
+      i {
+        font-size: 1rem;
+      }
+    }
   }
 
   .related__related-cards {
-    flex-wrap: wrap;
     margin: 0 auto;
+    
+    @media (max-width: '765px') {
+      flex-direction: column;
+    }
 
     .related__card {
       max-width: 24%;
       background-color: #fdfdfd;
 
-      img {
+      @media (max-width: '765px') {
         max-width: 100%;
+        margin: 0 auto;
+      }
+
+      img {
+        width: 100%;
       }
       .related__card__info {
         max-width: 70%;

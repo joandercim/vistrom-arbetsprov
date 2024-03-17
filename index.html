@@ -46,7 +46,29 @@
     <section class="product-section">
       <div class="product flex">
         <div class="main-image-container">
-          <img src="./assets/img/main.png" alt="product-image" />
+          <!-- <img src="./assets/img/main.png" alt="product-image" /> -->
+          <div class="slides flex">
+            <img
+              src="./assets/img/main.png"
+              class="slide display-slide"
+              alt="product-image"
+            />
+            <img
+              src="./assets/img/main-2.png"
+              class="slide"
+              alt="product-image"
+            />
+            <img
+              src="./assets/img/main.png"
+              class="slide"
+              alt="product-image"
+            />
+          </div>
+          <div class="slide-nav">
+            <div class="slide-nav__circle" id="0"></div>
+            <div class="slide-nav__circle" id="1"></div>
+            <div class="slide-nav__circle" id="2"></div>
+          </div>
         </div>
 
         <div class="product-info-container">
@@ -222,6 +244,9 @@
     </section>
     <section class="socials">
       <div class="socials__content flex justify-between">
+        <a class="socials__mobile" href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a class="socials__mobile" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a class="socials__mobile" href="#"><i class="fa-solid fa-envelope"></i></a>
         <a href="#"
           ><div class="socials__content__facebook uppercase">Facebook</div></a
         >
@@ -274,9 +299,22 @@
           </div>
         </div>
         <div class="footer__content__bottom">
-          <p><span>Detta är lite text som beskriver företaget för sökmotorer vilket resulterar i att vi rankar högre.</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Id veniam porro tempore dolores voluptate dolorem soluta itaque quia nesciunt vel, fugit, obcaecati voluptatibus perspiciatis ipsum distinctio impedit! Odio possimus ipsam, earum optio ratione ad debitis officia? Autem excepturi molestiae veniam voluptate aut eaque eveniet, nulla, qui distinctio.</p>
+          <p>
+            <span
+              >Detta är lite text som beskriver företaget för sökmotorer vilket
+              resulterar i att vi rankar högre.</span
+            >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id veniam
+            porro tempore dolores voluptate dolorem soluta itaque quia nesciunt
+            vel, fugit, obcaecati voluptatibus perspiciatis ipsum distinctio
+            impedit! Odio possimus ipsam, earum optio ratione ad debitis
+            officia? Autem excepturi molestiae veniam voluptate aut eaque
+            eveniet, nulla, qui distinctio.
+          </p>
         </div>
-        <p class="uppercase">Viström Webb AB &copy; 2017. Alla rättigheter reserverade</p>
+        <p class="uppercase">
+          Viström Webb AB &copy; 2017. Alla rättigheter reserverade
+        </p>
       </div>
     </footer>
 

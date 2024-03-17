@@ -11,6 +11,13 @@ footer {
       justify-content: space-between;
       padding: 6rem 0 10rem;
 
+      @media (max-width: '900px') {
+        flex-direction: column;
+        gap: 2rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+
       .customer-service,
       .contact,
       .shop,
@@ -22,6 +29,10 @@ footer {
           font-size: 1.3rem;
           margin-bottom: 1rem;
           font-weight: 500;
+
+          @media (max-width: '900px') {
+            margin-bottom: .1rem;
+        }
         }
 
         ul {

@@ -17,6 +17,12 @@
     height: 100%;
     margin: 0 auto;
 
+    @media (max-width: '1180px') {
+     flex-direction: column;   
+     justify-content: center;
+     align-items: center;
+    }
+
     .subscribe__contents__text {
       flex-direction: column;
       justify-content: center;
@@ -34,14 +40,25 @@
       p {
         line-height: 1.6rem;
       }
+
+      @media (max-width: '1180px') {
+        width: 100%;
+
+        h2 {
+          font-size: 1.6rem;
+        }
+       }
     }
 
     .subscribe__contents__form {
       padding-left: 4rem;
       align-items: center;
 
+      @media (max-width: '1347px') {
+        padding: 0;
+      }
+
       form {
-        border: 1px solid black;
         height: 3rem;
 
         input[type='text'] {
@@ -68,75 +85,25 @@
           height: 100%;
           padding: 0 2rem;
         }
+
+        @media (max-width: '1180px') {
+          height: 2rem;
+
+          button {
+            font-size: .9rem;
+            margin-top: 1rem;
+            padding: 0 1rem;
+          }
+
+          input[type='text'] {
+            width: 10rem;
+          }
+
+          input[type='text']::placeholder {
+            font-size: .7rem;
+          }
+         }
       }
     }
   }
 }
-
-// .subscribe {
-//   width: 96%;
-//   max-width: 1590px;
-//   margin: 0 auto;
-//   height: 20rem;
-//   border: 1px solid red;
-
-//   .subscribe__contents {
-//     border: 5px solid red;
-// justify-content: space-between;
-//   align-items: center;
-//   margin-bottom: 200px;
-
-//     img {
-//       object-fit: cover;
-//       opacity: .4;
-//       width: 100%;
-//     }
-
-//     .subscribe__text {
-//       color: white;
-//       width: 50%;
-//       text-align: center;
-
-//       h2 {
-//         font-weight: 400;
-//         font-size: 2.4rem;
-//         margin-bottom: 1.6rem;
-//       }
-
-//       p {
-//         line-height: 1.6rem;
-//       }
-//     }
-
-//     .subscribe__form {
-//       width: 50%;
-
-//       form {
-//         display: flex;
-
-//         input[type='text'] {
-//           border: none;
-//           display: block;
-//           width: 25rem;
-//           padding: 1rem;
-//           margin-left: 5rem;
-//         }
-
-//         input[type='text']::placeholder {
-//           text-transform: uppercase;
-//           font-size: 1rem;
-//         }
-
-//         button {
-//           border: none;
-//           background-color: $button-black;
-//           color: white;
-//           font-size: 1rem;
-//           padding: 0 2rem;
-//         }
-//       }
-//     }
-
-//   }
-
-// }

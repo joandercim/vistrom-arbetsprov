@@ -110,11 +110,46 @@
   margin: 0 auto 7rem;
   max-width: 1590px;
 }
+@media (max-width: 930px) {
+  .product-section .product {
+    flex-direction: column;
+  }
+}
 .product-section .product .main-image-container {
   min-width: 56%;
+  min-height: 20rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
 }
 .product-section .product .main-image-container img {
   width: 100%;
+  height: 100%;
+  display: none;
+  object-fit: cover;
+}
+.product-section .product .main-image-container img.display-slide {
+  display: block;
+}
+.product-section .product .main-image-container .slide-nav {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  width: 6rem;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+.product-section .product .main-image-container .slide-nav .slide-nav__circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #999999;
+  cursor: pointer;
+}
+.product-section .product .main-image-container .slide-nav .slide-nav__circle.active-slide {
+  background-color: white;
 }
 .product-section .product .product-info-container {
   min-width: 40%;
@@ -198,6 +233,11 @@
   margin: 0 auto 6rem;
   max-width: 1431px;
 }
+@media (max-width: 860px) {
+  .related {
+    margin: 0 2rem;
+  }
+}
 .related .related__header {
   margin-bottom: 2.7rem;
   color: black;
@@ -213,16 +253,33 @@
   font-size: 1.25rem;
   padding-left: 1rem;
 }
+@media (max-width: 860px) {
+  .related .related__header h4,
+  .related .related__header a,
+  .related .related__header i {
+    font-size: 1rem;
+  }
+}
 .related .related__related-cards {
-  flex-wrap: wrap;
   margin: 0 auto;
+}
+@media (max-width: 765px) {
+  .related .related__related-cards {
+    flex-direction: column;
+  }
 }
 .related .related__related-cards .related__card {
   max-width: 24%;
   background-color: #fdfdfd;
 }
+@media (max-width: 765px) {
+  .related .related__related-cards .related__card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
 .related .related__related-cards .related__card img {
-  max-width: 100%;
+  width: 100%;
 }
 .related .related__related-cards .related__card .related__card__info {
   max-width: 70%;
@@ -271,6 +328,13 @@
   height: 100%;
   margin: 0 auto;
 }
+@media (max-width: 1180px) {
+  .subscribe .subscribe__contents {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .subscribe .subscribe__contents .subscribe__contents__text {
   flex-direction: column;
   justify-content: center;
@@ -287,12 +351,24 @@
 .subscribe .subscribe__contents .subscribe__contents__text p {
   line-height: 1.6rem;
 }
+@media (max-width: 1180px) {
+  .subscribe .subscribe__contents .subscribe__contents__text {
+    width: 100%;
+  }
+  .subscribe .subscribe__contents .subscribe__contents__text h2 {
+    font-size: 1.6rem;
+  }
+}
 .subscribe .subscribe__contents .subscribe__contents__form {
   padding-left: 4rem;
   align-items: center;
 }
+@media (max-width: 1347px) {
+  .subscribe .subscribe__contents .subscribe__contents__form {
+    padding: 0;
+  }
+}
 .subscribe .subscribe__contents .subscribe__contents__form form {
-  border: 1px solid black;
   height: 3rem;
 }
 .subscribe .subscribe__contents .subscribe__contents__form form input[type=text] {
@@ -317,6 +393,22 @@
   height: 100%;
   padding: 0 2rem;
 }
+@media (max-width: 1180px) {
+  .subscribe .subscribe__contents .subscribe__contents__form form {
+    height: 2rem;
+  }
+  .subscribe .subscribe__contents .subscribe__contents__form form button {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+  .subscribe .subscribe__contents .subscribe__contents__form form input[type=text] {
+    width: 10rem;
+  }
+  .subscribe .subscribe__contents .subscribe__contents__form form input[type=text]::placeholder {
+    font-size: 0.7rem;
+  }
+}
 
 .socials {
   background-color: #f1f1f1;
@@ -327,11 +419,28 @@
   padding: 3rem 0;
   gap: 1.4rem;
 }
+@media (max-width: 1460px) {
+  .socials .socials__content {
+    width: 95%;
+  }
+}
 .socials .socials__content a {
   flex-grow: 1;
   color: black;
   font-size: 1.13rem;
   letter-spacing: 1px;
+}
+.socials .socials__content a.socials__mobile {
+  display: none;
+}
+@media (max-width: 500px) {
+  .socials .socials__content a.socials__mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 30%;
+    font-size: 1.4rem;
+  }
 }
 .socials .socials__content .socials__content__instagram,
 .socials .socials__content .socials__content__facebook,
@@ -341,6 +450,20 @@
   align-items: center;
   border: 2px solid black;
   padding: 1rem 0;
+}
+@media (max-width: 1460px) {
+  .socials .socials__content .socials__content__instagram,
+  .socials .socials__content .socials__content__facebook,
+  .socials .socials__content .socials__content__nyhetsbrev {
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .socials .socials__content .socials__content__instagram,
+  .socials .socials__content .socials__content__facebook,
+  .socials .socials__content .socials__content__nyhetsbrev {
+    display: none;
+  }
 }
 
 footer {
@@ -356,6 +479,14 @@ footer .footer__content .footer__content__top {
   justify-content: space-between;
   padding: 6rem 0 10rem;
 }
+@media (max-width: 900px) {
+  footer .footer__content .footer__content__top {
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 footer .footer__content .footer__content__top .customer-service,
 footer .footer__content .footer__content__top .contact,
 footer .footer__content .footer__content__top .shop,
@@ -370,6 +501,14 @@ footer .footer__content .footer__content__top .extra h4 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   font-weight: 500;
+}
+@media (max-width: 900px) {
+  footer .footer__content .footer__content__top .customer-service h4,
+  footer .footer__content .footer__content__top .contact h4,
+  footer .footer__content .footer__content__top .shop h4,
+  footer .footer__content .footer__content__top .extra h4 {
+    margin-bottom: 0.1rem;
+  }
 }
 footer .footer__content .footer__content__top .customer-service ul li,
 footer .footer__content .footer__content__top .contact ul li,

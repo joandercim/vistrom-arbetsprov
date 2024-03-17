@@ -7,11 +7,27 @@
         padding: 3rem 0;
         gap: 1.4rem;
 
+        @media (max-width: '1460px') {
+            width: 95%;
+        }
+
         a {
             flex-grow: 1;
             color: black;
             font-size: 1.13rem;
             letter-spacing: 1px;
+        }
+
+        a.socials__mobile {
+            display: none;
+
+            @media (max-width: '500px') {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 30%;
+                font-size: 1.4rem;
+            }
         }
 
         .socials__content__instagram,
@@ -22,6 +38,15 @@
             align-items: center;
             border: 2px solid black;
             padding: 1rem 0;
+
+            @media (max-width: '1460px') {
+                padding: .5rem;
+            }
+
+            @media (max-width: '500px') {
+                display: none;
+            }
+
         }
     }
 }
