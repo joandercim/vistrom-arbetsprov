@@ -11,7 +11,7 @@
       height: 100dvh;
       overflow: hidden;
       transition: all .5s ease-in-out;
-      max-width: 100%;
+      max-width: 100;
 
       .mobile-sidebar__contents {
           margin: 6rem 2rem 0.5rem;
@@ -72,6 +72,10 @@
       align-items: center;
       padding: 0.5rem 1rem;
       gap: 1.6rem;
+
+      li a {
+        color: black;
+      }
 
       i {
         color: black;
