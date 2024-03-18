@@ -159,6 +159,8 @@
   overflow-x: scroll;
   scroll-behavior: smooth;
   scrollbar-width: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .product-section .product .main-image-container .slides::-webkit-scrollbar {
   width: 0;

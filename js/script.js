@@ -81,29 +81,6 @@ const toggleNav = () => {
   }
 };
 
-const updateSliderNav = (e) => {
-  if (slidesContainer.scrollLeft < 480) {
-    slideSelectors.forEach((selector) => {
-      selector.classList.remove('active-slide');
-    });
-    slideSelectors[0].classList.add('active-slide');
-  } else if (
-    slidesContainer.scrollLeft > 480 &&
-    slidesContainer.scrollLeft < 940
-  ) {
-    slideSelectors.forEach((selector) => {
-      selector.classList.remove('active-slide');
-    });
-
-    slideSelectors[1].classList.add('active-slide');
-  } else if (slidesContainer.scrollLeft > 940) {
-    slideSelectors.forEach((selector) => {
-      selector.classList.remove('active-slide');
-    });
-    slideSelectors[2].classList.add('active-slide');
-  }
-};
-
 const init = () => {
   chevronDown.forEach((chev) => {
     chev.addEventListener('click', toggleAccordionRow);
@@ -115,7 +92,6 @@ const init = () => {
 
   slideSelectors[0].classList.add('active-slide');
   menuBtn.addEventListener('click', toggleNav);
-  slidesContainer.addEventListener('scroll', (e) => updateSliderNav(e));
 };
 
 document.addEventListener('DOMContentLoaded', init);
