@@ -24,30 +24,35 @@
         </div>
       </div>
       <div class="main-nav-container">
-        <div class="main-nav flex justify-between uppercase">
-          <ul class="flex main-nav__left__mobile">
-            <div class="mobile-nav">
+        <div class="main-nav-mobile relative flex justify-between">
+          <div class="mobile-sidebar">
+            <div class="mobile-sidebar__contents">
+              <ul class="mobile-sidebar__contents__top-section">
+                <li><a href="#">Herr</a></li>
+                <li><a href="#">Dam</a></li>
+                <li><a href="#">Märken</a></li>
+                <li><a href="#">Rea</a></li>
+              </ul>
+              <ul class="mobile-sidebar__contents__bottom-section">
+                <li><a href="#">Mitt konto</a></li>
+                <li><a href="#">Kundtjänst</a></li>
+                <li><a href="#">Blogg</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-nav-mobile__left flex">
+            <div class="main-nav-mobile__burger">
               <div class="mobile-nav__line"></div>
               <div class="mobile-nav__line"></div>
             </div>
-          </ul>
-          <ul class="flex main-nav__left__desktop">
-            <li><a href="#">Herr</a></li>
-            <li><a href="#">Dam</a></li>
-            <li><a href="#">Märken</a></li>
-            <li><a href="#">Rea</a></li>
-          </ul>
-          <div class="main-nav__logo flex justify-center">Logo</div>
-          <ul class="flex main-nav__right__desktop">
-            <li><a href="#">Sök</a></li>
-            <li><a href="#">Lista (2)</a></li>
+            <div class="main-nav-mobile__logo flex justify-center uppercase">
+              Logo
+            </div>
+          </div>
+
+          <ul class="flex main-nav-mobile__right">
             <li>
-              <a href="#">Kundkorg (2)</a>
-              <i class="fa-solid fa-cart-shopping"></i>
-            </li>
-          </ul>
-          <ul class="flex main-nav__right__mobile">
-            <li>
+              <input type="search" placeholder="Sök">
               <a href="#"><i class="fa-solid fa-search"></i></a>
             </li>
             <li>
@@ -55,6 +60,24 @@
             </li>
             <li>
               <a href="#"><i class="fa-solid fa-cart-shopping"></i>(2)</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="main-nav-desktop flex justify-between uppercase">
+          <ul class="flex main-nav-desktop__left">
+            <li><a href="#">Herr</a></li>
+            <li><a href="#">Dam</a></li>
+            <li><a href="#">Märken</a></li>
+            <li><a href="#">Rea</a></li>
+          </ul>
+          <div class="main-nav-desktop__logo flex justify-center">Logo</div>
+          <ul class="flex main-nav-desktop__right">
+            <li><a href="#">Sök</a></li>
+            <li><a href="#">Lista (2)</a></li>
+            <li>
+              <a href="#">Kundkorg (2)</a>
+              <i class="fa-solid fa-cart-shopping"></i>
             </li>
           </ul>
         </div>

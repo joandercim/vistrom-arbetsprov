@@ -4,22 +4,9 @@ const slides = document.querySelectorAll('.slides img');
 const slideSelectors = document.querySelectorAll('.slide-nav__circle');
 const slide = document.querySelector('.slide');
 const slidesContainer = document.querySelector('.slides');
+const menuBtn = document.querySelector('.main-nav-mobile__burger');
 
-const showSlide = (id) => {
-  slides[id].classList.add('display-slide');
-  slideSelectors[id].classList.add('active-slide');
-};
-
-const changeSlide = (e) => {
-  slideSelectors.forEach((selector) => {
-    selector.classList.remove('active-slide');
-  });
-  slides.forEach((slide) => {
-    slide.classList.remove('display-slide');
-  });
-
-  showSlide(e.target.id);
-};
+let navToggled = false;
 
 const toggleAccordionRow = (e) => {
   const row = e.target.parentElement.parentElement;
@@ -69,6 +56,31 @@ const changeSlideNew = (e) => {
   }
 };
 
+const toggleNav = () => {
+  const lines = document.querySelectorAll('.mobile-nav__line');
+  const topLine = lines[0];
+  const bottomLine = lines[1];
+  const sidebar = document.querySelector('.mobile-sidebar');
+
+  if (!navToggled) {
+    navToggled = true;
+    bottomLine.style.top = '11px';
+    topLine.style.top = '11px';
+    setTimeout(() => {
+      topLine.style.transform = 'rotate(45deg)';
+      bottomLine.style.transform = 'rotate(-45deg)';
+      sidebar.style.left = '0'
+    }, 300);
+  } else {
+    navToggled = false;
+    topLine.style.transform = 'rotate(0deg)';
+    bottomLine.style.transform = 'rotate(0deg)';
+    bottomLine.style.top = '14px';
+    topLine.style.top = '5px';
+    sidebar.style.left = '-376px';
+  }
+};
+
 const init = () => {
   chevronDown.forEach((chev) => {
     chev.addEventListener('click', toggleAccordionRow);
@@ -79,6 +91,7 @@ const init = () => {
   );
 
   slideSelectors[0].classList.add('active-slide');
+  menuBtn.addEventListener('click', toggleNav);
 };
 
 document.addEventListener('DOMContentLoaded', init);

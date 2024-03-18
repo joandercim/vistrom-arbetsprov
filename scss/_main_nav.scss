@@ -1,12 +1,10 @@
-@import './variables';
-
 .main-nav-container {
   background-color: white;
   filter: drop-shadow(1px 1px 5px #00000040);
   position: relative;
   z-index: 1;
 
-  .main-nav {
+  .main-nav-desktop {
     width: 80%;
     margin: 0 auto;
     height: 8rem;
@@ -17,7 +15,7 @@
       color: black;
     }
 
-    .main-nav__logo {
+    .main-nav-desktop__logo {
       align-items: center;
       font-size: 1.6rem;
       background-color: #d8d8d8;
@@ -32,72 +30,24 @@
       }
     }
 
-    .main-nav__left__desktop,
-    .main-nav__right__desktop {
+    .main-nav-desktop__left,
+    .main-nav-desktop__right {
       gap: 1.7rem;
       font-weight: 400;
       font-size: 1rem;
       width: 35%;
-
-      @media (max-width: '1200px') {
-        display: none;
-      }
     }
 
-    .main-nav__left__desktop {
+    .main-nav-desktop__left {
       justify-content: start;
     }
 
-    .main-nav__right__desktop,
-    .main-nav__right__mobile {
+    .main-nav-desktop__right {
       justify-content: end;
-
-      & i {
-        margin-left: 1rem;
-        margin-right: 0.3rem;
-        font-size: 1.1rem;
-        opacity: 0.7;
-
-        &:hover {
-          opacity: 1;
-        }
-      }
     }
 
-    .main-nav__right__mobile {
-      gap: 0.5rem;
-    }
-
-    .main-nav__left__mobile,
-    .main-nav__right__mobile {
-      font-weight: 400;
-      font-size: 1rem;
-      width: 35%;
-
-      @media (min-width: '1200px') {
-        display: none;
-      }
-    }
-
-    .main-nav__left__mobile {
-      .mobile-nav {
-        height: 22px;
-        width: 25px;
-        position: relative;
-        cursor: pointer;
-
-        .mobile-nav__line {
-          position: absolute;
-          top: 12px;
-          background-color: black;
-          width: 25px;
-          height: 2px;
-
-          &:first-of-type {
-            top: 6px;
-          }
-        }
-      }
+    @media (max-width: '1200px') {
+      display: none;
     }
   }
 }

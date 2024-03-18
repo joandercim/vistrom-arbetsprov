@@ -17,11 +17,21 @@
             gap: 1rem;
         }
 
+        .top-nav__right {
+            @media (max-width: 720px) {
+                display: none;
+            }
+        }
+
         ul {
             li a {
                 color: #b4b4b4;
 
             }
+        }
+
+        @media (max-width: 720px) {
+            justify-content: center;
         }
     }
 }
