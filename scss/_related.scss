@@ -11,6 +11,18 @@
     color: black;
     font-weight: 500;
 
+    @media (max-width: 590px) {
+        flex-direction: column-reverse;
+
+        h4 {
+          border-top: 1px solid #aaa;
+          padding-top: 1rem;
+        }
+
+        a {
+          margin-bottom: 1.2rem;
+        }
+    }
 
     h4,
     a {
@@ -24,7 +36,7 @@
       padding-left: 1rem;
     }
 
-    @media (max-width: '860px') {
+    @media (max-width: 860px) {
       h4,
       a,
       i {

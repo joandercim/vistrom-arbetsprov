@@ -12,6 +12,11 @@
         font-weight: 400;
         font-size: .85rem;
 
+        @media (max-width: 377px) {
+            width: 99%;
+            font-size: .6rem;
+        }
+
         .top-nav__left,
         .top-nav__right {
             gap: 1rem;

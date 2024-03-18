@@ -15,6 +15,12 @@
   font-weight: 400;
   font-size: 0.85rem;
 }
+@media (max-width: 377px) {
+  .top-nav .top-nav__content {
+    width: 99%;
+    font-size: 0.6rem;
+  }
+}
 .top-nav .top-nav__content .top-nav__left,
 .top-nav .top-nav__content .top-nav__right {
   gap: 1rem;
@@ -269,6 +275,18 @@
   margin-bottom: 2.7rem;
   color: black;
   font-weight: 500;
+}
+@media (max-width: 590px) {
+  .related .related__header {
+    flex-direction: column-reverse;
+  }
+  .related .related__header h4 {
+    border-top: 1px solid #aaa;
+    padding-top: 1rem;
+  }
+  .related .related__header a {
+    margin-bottom: 1.2rem;
+  }
 }
 .related .related__header h4,
 .related .related__header a {
@@ -598,6 +616,7 @@ footer .footer__content p {
   height: 100dvh;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
+  max-width: 100%;
 }
 .main-nav-container .main-nav-mobile .mobile-sidebar .mobile-sidebar__contents {
   margin: 6rem 2rem 0.5rem;
