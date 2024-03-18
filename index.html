@@ -25,19 +25,36 @@
       </div>
       <div class="main-nav-container">
         <div class="main-nav flex justify-between uppercase">
-          <ul class="flex main-nav__left">
+          <ul class="flex main-nav__left__mobile">
+            <div class="mobile-nav">
+              <div class="mobile-nav__line"></div>
+              <div class="mobile-nav__line"></div>
+            </div>
+          </ul>
+          <ul class="flex main-nav__left__desktop">
             <li><a href="#">Herr</a></li>
             <li><a href="#">Dam</a></li>
             <li><a href="#">Märken</a></li>
             <li><a href="#">Rea</a></li>
           </ul>
           <div class="main-nav__logo flex justify-center">Logo</div>
-          <ul class="flex main-nav__right">
+          <ul class="flex main-nav__right__desktop">
             <li><a href="#">Sök</a></li>
             <li><a href="#">Lista (2)</a></li>
             <li>
               <a href="#">Kundkorg (2)</a>
               <i class="fa-solid fa-cart-shopping"></i>
+            </li>
+          </ul>
+          <ul class="flex main-nav__right__mobile">
+            <li>
+              <a href="#"><i class="fa-solid fa-search"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-heart"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-cart-shopping"></i>(2)</a>
             </li>
           </ul>
         </div>
@@ -46,8 +63,7 @@
     <section class="product-section">
       <div class="product flex">
         <div class="main-image-container">
-          <!-- <img src="./assets/img/main.png" alt="product-image" /> -->
-          <div class="slides flex">
+          <div class="slides">
             <img
               src="./assets/img/main.png"
               class="slide display-slide"
@@ -244,9 +260,15 @@
     </section>
     <section class="socials">
       <div class="socials__content flex justify-between">
-        <a class="socials__mobile" href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a class="socials__mobile" href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a class="socials__mobile" href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a class="socials__mobile" href="#"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a class="socials__mobile" href="#"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a class="socials__mobile" href="#"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
         <a href="#"
           ><div class="socials__content__facebook uppercase">Facebook</div></a
         >
