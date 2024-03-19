@@ -17,10 +17,15 @@
           margin: 6rem 2rem 0.5rem;
           font-weight: 500;
           font-size: 1.2rem;
-
+          
           li {
-            border-bottom: 1px solid #f0f0f0;
-            margin: 6px 0;
+            opacity: .7;
+            border-bottom: 2px solid #e5e5e5;
+            margin: 1rem 0;
+
+            &:hover {
+              opacity: 1;
+            }
           }
           a {
               color: black;

@@ -5,32 +5,33 @@ const slideSelectors = document.querySelectorAll('.slide-nav__circle');
 const slide = document.querySelector('.slide');
 const slidesContainer = document.querySelector('.slides');
 const menuBtn = document.querySelector('.main-nav-mobile__burger');
-
 let navToggled = false;
 
-const toggleAccordionRow = (e) => {
-  const row = e.target.parentElement.parentElement;
-  const content = row.querySelector('.accordion__row__content');
+const toggleAccordionRowNew = (e) => {
+  const titleRow = e.target.parentElement;
+  const chev = e.target.nextElementSibling.nextElementSibling;
+  const title = e.target.nextElementSibling;
+  const content = e.target.parentElement.nextElementSibling;
 
-  if (row.classList.contains('active')) {
-    row.classList.remove('active');
-    e.target.style.transform = 'rotate(0deg)';
+  if (titleRow.classList.contains('active')) {
+    titleRow.classList.remove('active');
+    chev.style.color = '#aaaaaa';
+    title.style.color = '#aaaaaa';
+    title.style.fontWeight = '500';
+    chev.style.transform = 'rotate(0deg)';
     content.style.maxHeight = '0';
+    content.style.marginBottom = '0rem';
     return;
   }
-
-  rows.forEach((r) => {
-    r.classList.remove('active');
-    const rChevron = r.querySelector('.fa-chevron-down');
-    const rContent = r.querySelector('.accordion__row__content');
-    rChevron.style.transform = 'rotate(0deg)';
-    rContent.style.maxHeight = '0';
-  });
-
-  if (!row.classList.contains('active')) {
-    row.classList.add('active');
-    e.target.style.transform = 'rotate(180deg)';
+  
+  if (!titleRow.classList.contains('active')) {
+    chev.style.color = '#2a2a2a';
+    title.style.color = '#373735';
+    title.style.fontWeight = '500';
+    titleRow.classList.add('active');
+    chev.style.transform = 'rotate(180deg)';
     content.style.maxHeight = content.scrollHeight + 'px';
+    content.style.marginBottom = '2rem';
   }
 };
 
@@ -82,9 +83,14 @@ const toggleNav = () => {
 };
 
 const init = () => {
-  chevronDown.forEach((chev) => {
-    chev.addEventListener('click', toggleAccordionRow);
-  });
+  // chevronDown.forEach((chev) => {
+  //   chev.addEventListener('click', toggleAccordionRow);
+  // });
+
+  document
+    .querySelectorAll('.click-catcher').forEach(catcher => {
+      catcher.addEventListener('click', (e) => toggleAccordionRowNew(e));
+    })
 
   slideSelectors.forEach((selector) =>
     selector.addEventListener('click', (e) => changeSlideNew(e))
