@@ -83,10 +83,6 @@ const toggleNav = () => {
 };
 
 const init = () => {
-  // chevronDown.forEach((chev) => {
-  //   chev.addEventListener('click', toggleAccordionRow);
-  // });
-
   document
     .querySelectorAll('.click-catcher').forEach(catcher => {
       catcher.addEventListener('click', (e) => toggleAccordionRowNew(e));
